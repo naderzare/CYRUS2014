@@ -23,7 +23,7 @@ DIR="."
 
 player="${DIR}/sample_player"
 coach="${DIR}/sample_coach"
-teamname="Cyrus"
+teamname="CYRUS2014"
 host="localhost"
 port=6000
 coach_port=""

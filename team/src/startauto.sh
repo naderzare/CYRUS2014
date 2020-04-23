@@ -23,7 +23,7 @@ DIR="/media/fedora/holand/cyrus/src"
 
 player="/media/fedora/holand/cyrus/src/sample_player"
 coach="/media/fedora/holand/cyrus/src/sample_coach"
-teamname="cyrus"
+teamname="CYRUS2014"
 host="127.0.0.1"
 port=6000
 coach_port=""

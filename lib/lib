@@ -1,0 +1,8 @@
+#!/bin/sh
+
+su $
+
+cd /home/nkpo/workspace/lib$
+make $
+make install$
+

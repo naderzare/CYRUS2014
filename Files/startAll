@@ -1,0 +1,28 @@
+#!/bin/sh
+
+DIR=`dirname $0`
+
+${DIR}/start 127.0.0.1 . 1 &
+sleep .1
+${DIR}/start 127.0.0.1 . 2 &
+sleep .1
+${DIR}/start 127.0.0.1 . 3 &
+sleep .1
+${DIR}/start 127.0.0.1 . 4 &
+sleep .1
+${DIR}/start 127.0.0.1 . 5 &
+sleep .1
+${DIR}/start 127.0.0.1 . 6 &
+sleep .1
+${DIR}/start 127.0.0.1 . 7 &
+sleep .1
+${DIR}/start 127.0.0.1 . 8 &
+sleep .1
+${DIR}/start 127.0.0.1 . 9 &
+sleep .1
+${DIR}/start 127.0.0.1 . 10 &
+sleep .1
+${DIR}/start 127.0.0.1 . 11 &
+sleep .1
+${DIR}/start 127.0.0.1 . 12 &
+sleep .1

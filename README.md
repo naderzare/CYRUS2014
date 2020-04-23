@@ -4,18 +4,8 @@ Cyrus2014 Soccer simulation 2D team, 1st IranOpen2014, 5th RoboCup 2014
 ## How to use it?
 
 ```
-clone https://github.com/naderzare/cyrus2014.git
-
-cd lib
-./configure --prefix=/usr/local/cyrus2014_lib
-make
-sudo make install
-
-cd ../team
-./configure --with-librcsc=/usr/local/cyrus2014_lib
-cd src
-make
-./start.sh
+clone https://github.com/naderzare/cyrus2014.git && cd CYRUS2014
+bash ./makeFirstTime.sh
 
 ENJOY IT
 ```

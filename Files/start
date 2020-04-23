@@ -1,0 +1,48 @@
+#!/bin/sh
+
+HOST=$1
+BASEDIR=$2
+NUM=$3
+
+DIR=`dirname $0`
+
+
+teamname="Agent2DStack"
+
+player="${DIR}/sample_player"
+coach="${DIR}/sample_coach"
+
+config="${DIR}/player.conf"
+config_dir="${DIR}/formations-dt"
+coach_config="${DIR}/coach.conf"
+
+
+opt="--player-config ${config} --config_dir ${config_dir}"
+opt="${opt} -h ${HOST} -t ${teamname}"
+
+coachopt="--coach-config ${coach_config}"
+coachopt="${coachopt} -h ${HOST} -t ${teamname}"
+
+
+LIBPATH="${DIR}/lib"
+if [ x"$LIBPATH" != x ]; then
+  if [ x"$LD_LIBRARY_PATH" = x ]; then
+    LD_LIBRARY_PATH=$LIBPATH
+  else
+    LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
+  fi
+  export LD_LIBRARY_PATH
+fi
+
+
+case $NUM in
+    1)
+        $player $opt -g
+        ;;
+    12)
+        $coach $coachopt
+        ;;
+    *)
+        $player $opt
+        ;;
+esac

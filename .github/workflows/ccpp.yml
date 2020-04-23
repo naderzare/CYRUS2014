@@ -1,0 +1,22 @@
+name: Agent2D Buid + Binary
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-16.04
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: install Dependency
+      run: sudo apt-get update && sudo apt-get install -y g++ build-essential libboost-all-dev qt4-dev-tools libaudio-dev libgtk-3-dev libxt-dev bison flex
+    - name: make
+      run: ./makeFirstTime.sh
+    - name: Binary
+      run: ./makeBin.sh
+    - name: Archive Binary
+      uses: actions/upload-artifact@v1
+      with:
+        name: Team Binary
+        path: Bin/Binary.tar.gz

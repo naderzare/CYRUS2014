@@ -1,0 +1,11 @@
+ version: 2
+ jobs:
+   build:
+     docker:
+       - image: moshtebam/librcsc-image:2.4
+     steps:
+       - checkout
+       - run: ls
+       - run: cd our && ./configure CXXFLAGS='-std=c++03'
+       - run: cd our && make clean
+       - run: cd our && make

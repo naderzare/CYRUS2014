@@ -1,0 +1,15 @@
+image: ubuntu:16.04
+
+stages:
+  - build
+  
+Build & Binary:
+  stage: build
+  script:
+    - apt-get update && apt-get install -y g++ build-essential libboost-all-dev qt4-dev-tools libaudio-dev libgtk-3-dev libxt-dev bison flex automake
+    - ./makeFirstTime.sh
+    - ./makeBin.sh
+  artifacts:
+    paths:
+    - ./Bin/Binary.tar.gz
+
